@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css");
+
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #000000;
+}
+
+.top_part {
+  width: 100%;
+  height: 100vh;
+  background-image: url(bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dark_layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#000000e1, #000000ab, #0000008f, #000000d0, #000000d8, #000000);
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  max-width: 1200px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 30px;
+}
+
+.header .netflix_logo {
+  width: 148px;
+  height: 40px;
+}
+
+.header .netflix_logo img {
+  width: 100%;
+  height: 100%;
+}
+
+#sign_in {
+  text-decoration: none;
+  color: #fff;
+  background-color: #e50914;
+  padding: 7px 17px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.text_area {
+  max-width: 1100px;
+  width: 100%;
+  height: 65vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.text_area h1 {
+  font-size: 3.8rem;
+  color: #fff;
+  text-align: center;
+  width: 65%;
+  margin-bottom: 1rem;
+  line-height: 78px;
+  letter-spacing: -1px;
+}
+
+.text_area p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.text_area h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.search_area {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_area input {
+  font-size: 18px;
+  width: 437px;
+  height: 56px;
+  padding: 0 16px;
+  border: 1px solid #5e5e5e;
+  border-radius: 4px;
+  background: #1d1d1d7c;
+  color: #fff;
+
+  &:focus {
+    outline: 2px solid #fff;
+  }
+}
+
+.search_area input::placeholder {
+  color: #babab9ed;
+}
+
+.search_area button {
+  color: #fff;
+  background: #e50914;
+  border: none;
+  padding: 13px 30px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0 0 0 6px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: #c31119;
+  }
+
+  &:active {
+    background: #99161d;
+    color: #e1babc;
+  }
+}
+
+.search_area button i {
+  font-size: 25px;
+  font-weight: lighter;
+  margin: 0 0 0 10px;
+}
+
+.breaker_light {
+  position: absolute;
+  background-color: #000000;
+  width: 100%;
+  height: 100px;
+  border-radius: 100%;
+  left: 0;
+  bottom: -80px;
+  background: -webkit-radial-gradient(top, #15204d, #000, #000);
+}
+
+.breaker_light:nth-child(2) {
+  bottom: -76px;
+  background: linear-gradient(to right, #000, #851a4a, #ff000d, #851a4a, #000);
+}
+
+@media (max-width: 1100px) {
+  .header .netflix_logo {
+    width: 120px;
+  }
+  .text_area h1 {
+    font-size: 3rem;
+    width: 70%;
+  }
+}
+
+@media (max-width: 820px) {
+  .header .netflix_logo {
+    width: 100px;
+  }
+  .text_area h1 {
+    font-size: 2.5rem;
+    line-height: 60px;
+  }
+
+  .text_area {
+    width: 100%;
+    height: 55vh;
+    padding: 0 20px;
+  }
+  .text_area h3{
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .search_area{
+    flex-direction: column;
+  }
+  .search_area input {
+    padding: 10px 16px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .header .netflix_logo {
+    width: 90px;
+  }
+  .text_area {
+    width: 100%;
+    height: 50vh;
+    padding: 0 20px;
+  }
+
+  .text_area h1{
+    font-size: 30px;
+    line-height: 35px;
+    width: 90%;
+  }
+  .text_area p{
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .text_area h3{
+    font-size: 14px;
+  }
+  .search_area{
+    flex-direction: column;
+  }
+  .search_area input {
+    width: 90%;
+  }
+  .search_area button{
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
